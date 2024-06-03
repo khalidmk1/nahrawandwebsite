@@ -40,9 +40,9 @@ export default function Footer() {
       <section id="footer">
         <div className="footer_m clearfix">
           <div className="container">
-            <div className="row footer_1">
-              <div className="col-md-4">
-                <div className="footer_1i">
+            <div className="row footer_1 justify-content-between">
+              <div className="col-md-4 ">
+                <div className="footer_1i text-start">
                   <h3>
                     <a className="text-white" href="index.html">
                       <i className="fa fa-video-camera col_red me-1" /> Planet
@@ -67,35 +67,7 @@ export default function Footer() {
                   </h6>
                 </div>
               </div>
-              <div className="col-md-4">
-                <div className="footer_1i">
-                  <h4>
-                    Nahrawand <span className="col_red">team</span>
-                  </h4>
-                  <div className="footer_1i1 row mt-4 gapRow">
-                    {data.map((item, index) => {
-                      return (
-                        <div className="col-md-3 col-3" key={index}>
-                          <div className="footer_1i1i">
-                            <div className="grid clearfix">
-                              <figure className="effect-jazz mb-0">
-                                <a href="#">
-                                  <img
-                                    src={`https://nahrawandacademy.ma/storage/avatars/${item.avatar}`}
-                                    height={70}
-                                    className="w-100"
-                                    alt="avatar"
-                                  />
-                                </a>
-                              </figure>
-                            </div>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              </div>
+              
               <div className="col-md-4">
                 <div className="footer_1i">
                   <h4>
@@ -129,27 +101,22 @@ export default function Footer() {
                     }}
                   >
                     <li>
-                      <a href="#" className="icoRss" title="Rss">
+                      <a href="https://www.instagram.com/mynahrawandacademy/" className="icoRss" title="Rss">
                         <i className="fa fa-instagram" />
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="icoFacebook" title="Facebook">
+                      <a href="https://www.facebook.com/nahrawandacademyofficial/" className="icoFacebook" title="Facebook">
                         <i className="fa fa-facebook" />
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="icoTwitter" title="Twitter">
-                        <i className="fa fa-twitter" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="icoGoogle" title="Google +">
+                      <a href="https://www.youtube.com/@nahrawandacademy/featured" className="icoGoogle" title="Youtube +">
                         <i className="fa fa-youtube" />
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="icoLinkedin" title="Linkedin">
+                      <a href="https://www.linkedin.com/company/nahrawandacedemy/?originalSubdomain=ma" className="icoLinkedin" title="Linkedin">
                         <i className="fa fa-linkedin" />
                       </a>
                     </li>
@@ -169,7 +136,7 @@ export default function Footer() {
                   © {new Date().getFullYear()} Your Website Name. All Rights
                   Reserved | Design by{" "}
                   <a className="col_red" href="http://www.templateonweb.com">
-                    TemplateOnWeb
+                    Khalid MAKDMI / Hassan ELAASEMY
                   </a>
                 </p>
               </div>

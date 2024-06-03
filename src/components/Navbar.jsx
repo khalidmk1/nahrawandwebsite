@@ -46,27 +46,22 @@ export default function Navbar() {
                   }}
                 >
                   <li>
-                    <a href="#" className="icoRss" title="Rss">
+                    <a href="https://www.instagram.com/mynahrawandacademy/" className="icoRss" title="Rss">
                       <i className="fa fa-instagram" />
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="icoFacebook" title="Facebook">
+                    <a href="https://www.facebook.com/nahrawandacademyofficial/" className="icoFacebook" title="Facebook">
                       <i className="fa fa-facebook" />
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="icoTwitter" title="Twitter">
-                      <i className="fa fa-twitter" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="icoGoogle" title="Google +">
+                    <a href="https://www.youtube.com/@nahrawandacademy/featured" className="icoGoogle" title="Google +">
                       <i className="fa fa-youtube" />
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="icoLinkedin" title="Linkedin">
+                    <a href="https://www.linkedin.com/company/nahrawandacedemy/?originalSubdomain=ma" className="icoLinkedin" title="Linkedin">
                       <i className="fa fa-linkedin" />
                     </a>
                   </li>

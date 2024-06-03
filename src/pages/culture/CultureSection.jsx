@@ -11,11 +11,10 @@ export default function CultureSection() {
               <div className="col-md-12">
                 <div className="trend_1l">
                   <h4 className="mb-0" style={{ textAlign: "start" }}>
-                  <i className="fa fa-map align-middle col_red me-1"></i>{" "}
+                    <i className="fa fa-map align-middle col_red me-1"></i>{" "}
                     Location <span className="col_red">Nahrawand</span>
                   </h4>
                 </div>
-                
               </div>
             </div>
             {/*  <div className="play1 row mt-4 bg_grey pt-3 pb-3">
@@ -102,8 +101,7 @@ export default function CultureSection() {
                       <a href="#">
                         <img
                           src="img/31.jpg"
-                          height={515}
-                          className="w-100 h-100"
+                          className="w-100 h-auto img-fluid" // Use img-fluid class for responsive images
                           alt="abc"
                         />
                       </a>
@@ -112,7 +110,7 @@ export default function CultureSection() {
                 </div>
               </div>
               <div className="col-md-8 p-0">
-                <div className="play2r  bg_grey p-4">
+                <div className="play2r bg_grey p-4">
                   <h5>
                     <span className="col_red">BEST MOVIE OF THE MONTH :</span>{" "}
                     LIAM NEESON <span className="col_red">BLACKLIGHT</span>
@@ -127,17 +125,18 @@ export default function CultureSection() {
                     cat-and-mouse conflict ensues with a government official,
                     whose past may hold clues to the killers' identities.
                   </p>
-                  <div className="play2ri row mt-4 ">
+                  <div className="play2ri row mt-4">
                     <div className="col-md-12">
-                      <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3473115.337456489!2d-9.789994701988649!3d31.77828021081976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b88619651c58d%3A0xd9d39381c42cffc3!2sMorocco!5e0!3m2!1sen!2sma!4v1717157916021!5m2!1sen!2sma"
-                        width={600}
-                        height={450}
-                        style={{ border: 0 }}
-                        allowFullScreen=""
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                      />
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.6346991216237!2d-7.57801962430328!3d33.588832773334914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d3d0ebe21305%3A0x4030117179d64b34!2sNahrawand%20Academy!5e0!3m2!1sfr!2sma!4v1717412202617!5m2!1sfr!2sma"
+                          style={{ border: 0 }}
+                          allowFullScreen=""
+                          loading="lazy"
+                          referrerPolicy="no-referrer-when-downgrade"
+                          className="embed-responsive-item"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
