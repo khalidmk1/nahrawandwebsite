@@ -12,7 +12,7 @@ export default function CultureSection() {
                 <div className="trend_1l">
                   <h4 className="mb-0" style={{ textAlign: "start" }}>
                     <i className="fa fa-map align-middle col_red me-1"></i>{" "}
-                    Location <span className="col_red">Nahrawand</span>
+                    Location ddddddd <span className="col_red">Nahrawand</span>
                   </h4>
                 </div>
               </div>
