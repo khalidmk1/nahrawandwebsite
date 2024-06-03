@@ -55,15 +55,15 @@ export default function Footer() {
                   </p>
                   <h6 className="fw-normal">
                     <i className="fa fa-map-marker fs-5 align-middle col_red me-1" />{" "}
-                    5311 Ceaver Sidge Td. Pakland, DE 13507
+                    la villette, Cosmos 4 rue 1, Casablanca 20250
                   </h6>
                   <h6 className="fw-normal mt-3">
                     <i className="fa fa-envelope fs-5 align-middle col_red me-1" />{" "}
-                    info@gmail.com
+                    mkadmikh12@gmail.com
                   </h6>
                   <h6 className="fw-normal mt-3 mb-0">
                     <i className="fa fa-phone fs-5 align-middle col_red me-1" />{" "}
-                    +123 123 456
+                    0522616800
                   </h6>
                 </div>
               </div>
