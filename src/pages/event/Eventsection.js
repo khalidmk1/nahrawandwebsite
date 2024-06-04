@@ -94,6 +94,7 @@ export default function Eventsection() {
                                     src={`https://nahrawandacademy.ma/storage/upload/event/${event.image}`}
                                     className="w-100"
                                     alt={event.title}
+                                    style={{height: 180}}
                                   />
                                 </a>
                               </figure>
