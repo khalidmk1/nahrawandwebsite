@@ -45,13 +45,17 @@ export default function Footer() {
                 <div className="footer_1i text-start">
                   <h3>
                     <a className="text-white" href="index.html">
-                      <i className="fa fa-video-camera col_red me-1" /> Planet
+                      <img
+                        src="img/logonahrawand.png"
+                        alt="logo"
+                        className="col_red me-1 logo_img"
+                      />
                     </a>
                   </h3>
                   <p className="mt-3">
                     Lorem ipsum dolor sit amet consect etur adi pisicing elit
-                    sed do eiusmod tempor incididunt. Lorem ipsum dolor sit
-                    amet consect etur.
+                    sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet
+                    consect etur.
                   </p>
                   <h6 className="fw-normal">
                     <i className="fa fa-map-marker fs-5 align-middle col_red me-1" />{" "}
@@ -67,7 +71,7 @@ export default function Footer() {
                   </h6>
                 </div>
               </div>
-              
+
               <div className="col-md-4">
                 <div className="footer_1i">
                   <h4>
@@ -101,22 +105,38 @@ export default function Footer() {
                     }}
                   >
                     <li>
-                      <a href="https://www.instagram.com/mynahrawandacademy/" className="icoRss" title="Rss">
+                      <a
+                        href="https://www.instagram.com/mynahrawandacademy/"
+                        className="icoRss"
+                        title="Rss"
+                      >
                         <i className="fa fa-instagram" />
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.facebook.com/nahrawandacademyofficial/" className="icoFacebook" title="Facebook">
+                      <a
+                        href="https://www.facebook.com/nahrawandacademyofficial/"
+                        className="icoFacebook"
+                        title="Facebook"
+                      >
                         <i className="fa fa-facebook" />
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.youtube.com/@nahrawandacademy/featured" className="icoGoogle" title="Youtube +">
+                      <a
+                        href="https://www.youtube.com/@nahrawandacademy/featured"
+                        className="icoGoogle"
+                        title="Youtube +"
+                      >
                         <i className="fa fa-youtube" />
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.linkedin.com/company/nahrawandacedemy/?originalSubdomain=ma" className="icoLinkedin" title="Linkedin">
+                      <a
+                        href="https://www.linkedin.com/company/nahrawandacedemy/?originalSubdomain=ma"
+                        className="icoLinkedin"
+                        title="Linkedin"
+                      >
                         <i className="fa fa-linkedin" />
                       </a>
                     </li>

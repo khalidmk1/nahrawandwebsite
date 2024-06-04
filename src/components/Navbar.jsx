@@ -10,7 +10,7 @@ export default function Navbar() {
               <div className="top_1l pt-1">
                 <h3 className="mb-0">
                   <a className="text-white" href="index.html">
-                    <i className="fa fa-video-camera col_red me-1" /> Planet
+                    <img src="img/logonahrawand.png" alt="logo"  className="col_red me-1 logo_img" />
                   </a>
                 </h3>
               </div>
