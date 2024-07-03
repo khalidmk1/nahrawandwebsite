@@ -127,7 +127,7 @@ export default function CultureSection() {
                   </p>
                   <div className="play2ri row mt-4">
                     <div className="col-md-12">
-                      <div class="embed-responsive embed-responsive-16by9">
+                      <div className="embed-responsive embed-responsive-16by9">
                         <iframe
                           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.6346991216237!2d-7.57801962430328!3d33.588832773334914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d3d0ebe21305%3A0x4030117179d64b34!2sNahrawand%20Academy!5e0!3m2!1sfr!2sma!4v1717412202617!5m2!1sfr!2sma"
                           style={{ border: 0 }}

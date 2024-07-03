@@ -67,8 +67,8 @@ export default function SpeakersSection() {
                   key={chunkIndex}
                 >
                   <div className="trend_2i row">
-                    {chunk.map((speaker) => (
-                      <div className="col-md-3" key={speaker.id}>
+                    {chunk.map((speaker , index) => (
+                      <div className="col-md-3" key={index}>
                         <div className="trend_2im clearfix position-relative">
                           <div className="trend_2im1 clearfix">
                             <div className="grid">

@@ -20,7 +20,6 @@ function App() {
       <Eventsection />
       <ContentSection />
       <SpeakersSection />
-
       <CultureSection />
       <Footer />
     </div>

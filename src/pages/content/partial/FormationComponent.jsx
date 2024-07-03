@@ -6,7 +6,7 @@ async function fetchData() {
     "https://ba.nahrawandacademy.com/api/content/formation"
   );
   console.log(response.data);
-  return response.data;
+  return response.data.slice(0, 6);
 }
 
 export default function FormationComponent() {
@@ -28,9 +28,9 @@ export default function FormationComponent() {
 
   if (loading) {
     return (
-      <div class="d-flex justify-content-center">
-        <div class="spinner-border" role="status">
-          <span class="sr-only">Loading...</span>
+      <div className="d-flex justify-content-center">
+        <div className="spinner-border" role="status">
+          <span className="sr-only">Loading...</span>
         </div>
       </div>
     );
