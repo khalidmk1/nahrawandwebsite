@@ -1,28 +1,21 @@
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-
-import SliderComming from "./pages/slider/SliderComming";
+import Home from "./screens/Home";
 import Navbar from "./components/Navbar";
-import FormationSection from "./pages/formation/FormationSection";
-
-import Eventsection from "./pages/event/Eventsection";
-import SpeakersSection from "./pages/speakers/SpeakersSection";
-
-import ContentSection from "./pages/content/ContentSection";
-import CultureSection from "./pages/culture/CultureSection";
 import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <SliderComming />
-      <FormationSection />
-      <Eventsection />
-      <ContentSection />
-      <SpeakersSection />
-      <CultureSection />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+        <Footer/>
+      </div>
+    </Router>
   );
 }
 
