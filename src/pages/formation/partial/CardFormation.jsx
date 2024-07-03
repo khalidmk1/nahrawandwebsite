@@ -3,9 +3,10 @@ import axios from "axios";
 
 async function fetchData() {
   const response = await axios.get(
-    "https://nahrawandacademy.ma/api/mobile/Cour/Formation"
+    "https://ba.nahrawandacademy.com/api/content/formation"
   );
-  return response.data.contentFormation;
+ 
+  return response.data;
 }
 
 export default function CardFormationComponent() {
@@ -26,7 +27,13 @@ export default function CardFormationComponent() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div class="d-flex justify-content-center">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    );
   }
 
   if (error) {
@@ -73,7 +80,7 @@ export default function CardFormationComponent() {
                           <figure className="effect-jazz mb-0">
                             <a href="#">
                               <img
-                                src={`https://nahrawandacademy.ma/storage/upload/cour/image/${item.cours_formation.image}`}
+                                src={`https://ba.nahrawandacademy.ma/storage/content/${item.image}`}
                                 className="w-100"
                                 alt={item.title}
                               />
@@ -96,7 +103,7 @@ export default function CardFormationComponent() {
                         </a>
                       </h5>
                       <p className="mb-2">
-                        ...{item.description.substring(0, 30)}
+                        ...{item.smallDescription.substring(0, 30)}
                       </p>
                       <span className="col_red">
                         {[...Array(5)].map((_, starIndex) => (
@@ -113,7 +120,8 @@ export default function CardFormationComponent() {
         </div>
         <button
           className="carousel-control-prev"
-          type="button" style={{visibility:'hidden'}}
+          type="button"
+          style={{ visibility: "hidden" }}
           data-bs-target="#carouselExampleIndicators1"
           data-bs-slide="prev"
         >
@@ -125,7 +133,8 @@ export default function CardFormationComponent() {
         </button>
         <button
           className="carousel-control-next"
-          type="button" style={{visibility:'hidden'}}
+          type="button"
+          style={{ visibility: "hidden" }}
           data-bs-target="#carouselExampleIndicators1"
           data-bs-slide="next"
         >

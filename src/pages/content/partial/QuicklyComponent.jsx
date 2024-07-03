@@ -3,7 +3,7 @@ import axios from "axios";
 
 async function fetchData() {
   const response = await axios.get(
-    "https://nahrawandacademy.ma/api/mobile/all/shorts"
+    "https://ba.nahrawandacademy.com/api/content/quickly"
   );
 
   return response.data;
@@ -47,8 +47,8 @@ export default function QuicklyComponent() {
                       <a href="#">
                         <img
                           src={
-                            `https://nahrawandacademy.ma/storage/upload/cour/image/flex/` +
-                            item.image_flex
+                            `https://ba.nahrawandacademy.ma/storage/flex/` +
+                            item.imageFlex
                           }
                           className="w-100"
                           alt={item.title}
@@ -82,7 +82,7 @@ export default function QuicklyComponent() {
                 </h5>
                 <h6>{item.genre}</h6>
                 <h6>Year: {new Date(item.created_at).getFullYear()}</h6>
-                <p>{item.description}</p>
+                <p>{item.smallDescription}</p>
                 <h6 className="mb-0">
                   <a className="button" href="#">
                     More Info - Trailer

@@ -3,10 +3,10 @@ import axios from "axios";
 
 async function fetchData() {
   const response = await axios.get(
-    "https://nahrawandacademy.ma/api/mobile/Cour/Podcast"
+    "https://ba.nahrawandacademy.com/api/content/podcast"
   );
 
-  return response.data.contentPodcast;
+  return response.data;
 }
 
 export default function PodcastComponent() {
@@ -47,8 +47,8 @@ export default function PodcastComponent() {
                       <a href="#">
                         <img
                           src={
-                            `https://nahrawandacademy.ma/storage/upload/cour/image/flex/` +
-                            item.cours_podcast.image_flex
+                            `https://ba.nahrawandacademy.ma/storage/flex/` +
+                            item.imageFlex
                           }
                           className="w-100"
                           alt={item.title}
@@ -82,7 +82,7 @@ export default function PodcastComponent() {
                 </h5>
                 <h6>{item.genre}</h6>
                 <h6>Year: {new Date(item.created_at).getFullYear()}</h6>
-                <p>{item.description}</p>
+                <p>{item.smallDescription}</p>
                 <h6 className="mb-0">
                   <a className="button" href="#">
                     More Info - Trailer

@@ -3,9 +3,10 @@ import axios from "axios";
 
 async function fetchData() {
   const response = await axios.get(
-    "https://nahrawandacademy.ma/api/mobile/Cour/Formation"
+    "https://ba.nahrawandacademy.com/api/content/formation"
   );
-  return response.data.contentFormation;
+  console.log(response.data);
+  return response.data;
 }
 
 export default function FormationComponent() {
@@ -26,13 +27,18 @@ export default function FormationComponent() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div class="d-flex justify-content-center">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    );
   }
 
   if (error) {
     return <div>Error: {error.message}</div>;
   }
-
 
   return (
     <div className="popular_2i row gapRow">
@@ -47,8 +53,8 @@ export default function FormationComponent() {
                       <a href="#">
                         <img
                           src={
-                            `https://nahrawandacademy.ma/storage/upload/cour/image/flex/` +
-                            item.cours_formation.image_flex
+                            `https://ba.nahrawandacademy.ma/storage/flex/` +
+                            item.imageFlex
                           }
                           className="w-100"
                           alt={item.title}
@@ -81,10 +87,8 @@ export default function FormationComponent() {
                   </a>
                 </h5>
                 <h6>{item.genre}</h6>
-                <h6>
-                Year: {new Date(item.created_at).getFullYear()} 
-                </h6>
-                <p>{item.description}</p>
+                <h6>Year: {new Date(item.created_at).getFullYear()}</h6>
+                <p>{item.smallDescription}</p>
                 <h6 className="mb-0">
                   <a className="button" href="#">
                     More Info - Trailer
