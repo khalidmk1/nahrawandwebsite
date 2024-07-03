@@ -38,7 +38,7 @@ export default function SpeakersSection() {
             <div className="trend_1l">
               <h4 className="mb-0">
                 <i className="fa fa-user align-middle col_red me-1"></i>
-                Popular hh <span className="col_red">Speakers</span>
+                Popular <span className="col_red">Speakers</span>
               </h4>
             </div>
           </div>

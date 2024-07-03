@@ -65,7 +65,7 @@ export default function SliderComming() {
               <div
                 key={index}
                 className={`carousel-item ${index === 0 ? "active" : ""}`}
-                style={{ height: "500px" }}
+                style={{ height: "669px" }}
               >
                 <img
                   src={
