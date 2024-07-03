@@ -6,7 +6,7 @@ async function fetchData() {
     "https://ba.nahrawandacademy.com/api/content/quickly"
   );
 
-  return response.data;
+  return response.data.slice(0, 6);
 }
 
 export default function QuicklyComponent() {
@@ -27,7 +27,13 @@ export default function QuicklyComponent() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="d-flex justify-content-center">
+        <div className="spinner-border" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      </div>
+    );
   }
 
   if (error) {
