@@ -12,7 +12,7 @@ export default function FormationSection() {
               <div className="trend_1l">
                 <h4 className="mb-0" style={{textAlign:'justify'}}>
                   <i className="fa fa-youtube-play align-middle col_red me-1" />{" "}
-                  Latestd <span className="col_red">Formation</span>
+                  Latest <span className="col_red">Formation</span>
                 </h4>
               </div>
             </div>
