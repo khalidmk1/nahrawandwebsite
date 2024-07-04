@@ -5,7 +5,6 @@ export default function DeatailEvent() {
   const location = useLocation();
   const { event } = location.state || {};
   const imageUrl = `https://ba.nahrawandacademy.com/storage/event/${event.image}`;
-
   return (
     <section className="anime-details spad">
       <div className="container">
@@ -15,7 +14,9 @@ export default function DeatailEvent() {
               <div
                 className="anime__details__pic set-bg"
                 style={{ backgroundImage: `url(${imageUrl})` }}
-              ></div>
+              >
+                
+              </div>
             </div>
             <div className="col-lg-9">
               <div className="anime__details__text">

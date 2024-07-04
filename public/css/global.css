@@ -135,6 +135,8 @@ hr {
 }
 .navbar {
   padding-top: 20px;
+  padding-left:5%;
+
   padding-bottom: 20px;
   background-color: #191a1d;
 }
@@ -432,7 +434,6 @@ a.socialIcon:hover,
   padding-bottom: 30px;
 }
 #footer {
-  background-image: url(../img/3.jpg);
   background-position: center;
 }
 .footer_1i .form-control {
