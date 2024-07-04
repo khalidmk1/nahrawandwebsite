@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import AllSpeakers from "./pages/speakers/AllSpeakers";
 import DetailConetent from "./screens/content/DetailConetent";
+import DeatailEvent from "./pages/event/DeatailEvent";
 
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
           <Route path="/content" element={<ShowContent />} />
           <Route path="/AllSpeakers" element={<AllSpeakers />} />
           <Route path="/detail" element={<DetailConetent />} />
+          <Route path="/DeatailEvent" element={<DeatailEvent />} />
+
         </Routes>
         <Footer />
       </div>

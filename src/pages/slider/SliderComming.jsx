@@ -15,7 +15,6 @@ export default function SliderComming() {
       setCommingsoon(response.data.contents || []);
       setVideos(response.data.vidoes || []);
       setLoading(false);
-      console.log(response.data);
     } catch (error) {
       setLoading(false);
       console.error("Error fetching data commingsoon:", error);

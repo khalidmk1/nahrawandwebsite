@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function AllSpeakers() {
   const [SpeakersData, setSpeakersData] = useState([]);
@@ -17,7 +18,6 @@ export default function AllSpeakers() {
         console.error("Error fetching data:", error);
       }
     };
-
     fetchData();
   }, []);
   // Logic to paginate speakers
@@ -29,7 +29,6 @@ export default function AllSpeakers() {
   );
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-  const totalPages = Math.ceil(SpeakersData.length / speakersPerPage);
   return (
     <>
       <section id="center" className="center_o pt-2 pb-2">
@@ -43,10 +42,10 @@ export default function AllSpeakers() {
             <div className="col-md-7">
               <div className="center_o1r text-end">
                 <h6 className="mb-0 col_red">
-                  <a href="#">Home</a>{" "}
+                  <Link to="/">Home</Link>
                   <span className="me-2 ms-2 text-light">
                     <i className="fa fa-caret-right align-middle" />
-                  </span>{" "}
+                  </span>
                   Speakers
                 </h6>
               </div>
@@ -59,7 +58,7 @@ export default function AllSpeakers() {
           <div className="team_1i row">
             {currentSpeakers.map((speaker, index) => (
               <div
-                className="col-md-4" // Adjusted col-md-3 to col-md-4 for better layout
+                className="col-md-4"
                 key={index}
                 style={{
                   margin: "5px 0",
@@ -80,6 +79,7 @@ export default function AllSpeakers() {
                             style={{
                               height: "400px",
                               borderRadius: "5px",
+                              opacity: 0.3,
                             }}
                             src={
                               "https://ba.nahrawandacademy.com/storage/avatars/" +
@@ -98,17 +98,12 @@ export default function AllSpeakers() {
                     <p
                       style={{
                         overflow: "hidden",
-                        width: "90%",
+                        width: "95%",
                       }}
                     >
                       {speaker.biographie}
                     </p>
-                    <ul
-                      className="social-network social-circle mb-0 mt-3"
-                      style={{
-                        backgroundColor: "rgba(0, 0, 0, 0.5)",
-                      }}
-                    >
+                    <ul className="social-network social-circle mb-0 mt-3">
                       {speaker.instagram && (
                         <li>
                           <a
@@ -148,50 +143,37 @@ export default function AllSpeakers() {
               </div>
             ))}
           </div>
-          {/* Pagination */}
-          <nav
-            aria-label="Page navigation example"
-            className="d-flex justify-content-center"
-          >
-            <ul className="pagination">
-              <li
-                className={`page-item ${currentPage === 1 ? "disabled" : ""}`}
-              >
-                <button
-                  className="page-link"
-                  onClick={() => paginate(currentPage - 1)}
-                  aria-label="Previous"
-                >
-                  <span aria-hidden="true">&laquo;</span>
-                </button>
-              </li>
-              {Array.from({ length: totalPages }, (_, i) => (
-                <li
+          <div className="product__pagination text-center">
+            {Array.from(
+              { length: Math.ceil(SpeakersData.length / speakersPerPage) },
+              (_, i) => (
+                <a
                   key={i}
-                  className={`page-item ${
-                    currentPage === i + 1 ? "active" : ""
-                  }`}
+                  href="#"
+                  className={currentPage === i + 1 ? "current-page" : ""}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    paginate(i + 1);
+                  }}
                 >
-                  <button onClick={() => paginate(i + 1)} className="page-link">
-                    {i + 1}
-                  </button>
-                </li>
-              ))}
-              <li
-                className={`page-item ${
-                  currentPage === totalPages ? "disabled" : ""
-                }`}
-              >
-                <button
-                  className="page-link"
-                  onClick={() => paginate(currentPage + 1)}
-                  aria-label="Next"
-                >
-                  <span aria-hidden="true">&raquo;</span>
-                </button>
-              </li>
-            </ul>
-          </nav>
+                  {i + 1}
+                </a>
+              )
+            )}
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                if (
+                  currentPage < Math.ceil(SpeakersData.length / speakersPerPage)
+                ) {
+                  paginate(currentPage + 1);
+                }
+              }}
+            >
+              <i className="fa fa-angle-double-right"></i>
+            </a>
+          </div>
         </div>
       </section>
     </>
