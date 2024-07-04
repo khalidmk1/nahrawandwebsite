@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import ContentCommentComponent from "./partial/ContentCommentComponent";
 import ContentNewsComponent from "./partial/ContentNewsComponent";
+import Header from "../../components/Header";
 
 export default function Detail() {
   const location = useLocation();
@@ -12,7 +13,7 @@ export default function Detail() {
   }
   return (
     <>
-      <div className="container">
+      <div className="container mt-5">
         <div className="anime__details__content">
           <div className="row ">
             <div className="col-lg-3">
@@ -105,17 +106,15 @@ export default function Detail() {
           </div>
           <div className="col-lg-4 col-md-4">
             <div className="anime__details__sidebar">
-            <div className="row titleContentStyle">
+              <div className="row titleContentStyle">
                 <div className="col-lg-8 col-md-8 col-sm-6 ">
                   <div className="section-title position-relative">
                     <h4 className="content__title">Content You My Like</h4>
                   </div>
                 </div>
               </div>
-              
-             <ContentNewsComponent />
-             
-             
+
+              <ContentNewsComponent />
             </div>
           </div>
         </div>

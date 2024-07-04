@@ -1,13 +1,11 @@
 import React from "react";
 import ContentComponent from "./partial/ContentComponent";
 import ContentQuicklyComponent from "./partial/ContentQuicklyComponent";
-import Header from "../../components/Header";
 
 export default function Show() {
   return (
     <>
-      <Header title={"Content"} />
-      <div class="container mt-2">
+      <div class="container mt-4 ">
         <div class="row row__container justify-content-center">
           <div class="col-sm-6 ">
             <div className="row titleContentStyle">
