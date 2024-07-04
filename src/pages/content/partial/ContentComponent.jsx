@@ -56,12 +56,14 @@ export default function ContentComponent() {
           <div className="col-lg-4 col-md-6 col-sm-6" key={index}>
             <div className="product__item">
               <div className="product__item__container">
-                <img
-                  className="product__item__pic set-bg w-100"
-                  src={`https://ba.nahrawandacademy.ma/storage/flex/${item.imageFlex}`}
-                  alt={`Product Image for ${item.name}`}
-                />
-                <div className="ep">18 / 18</div>
+                <Link className="button__content" to="/detail" state={{ item }}>
+                  <img
+                    className="product__item__pic set-bg w-100"
+                    src={`https://ba.nahrawandacademy.ma/storage/flex/${item.imageFlex}`}
+                    alt={`Product Image for ${item.name}`}
+                  />
+                </Link>
+                <div className="ep">{item.contentType}</div>
                 <div className="comment__content__card">
                   <i className="fa fa-comments" /> 11
                 </div>
@@ -69,16 +71,7 @@ export default function ContentComponent() {
                   <i className="fa fa-eye" /> 9141
                 </div>
               </div>
-              <div className="product__item__text">
-                <ul className="d-flex">
-                  <li>{item.contentType}</li>
-                </ul>
-                <h5 className="d-flex">
-                  <Link className="button" to="/detail" state={{ item }}>
-                    {item.title}
-                  </Link>
-                </h5>
-              </div>
+              
             </div>
           </div>
         ))}
