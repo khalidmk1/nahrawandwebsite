@@ -8,7 +8,8 @@ import Footer from "./components/Footer";
 import AllSpeakers from "./pages/speakers/AllSpeakers";
 import DetailConetent from "./screens/content/DetailConetent";
 import DeatailEvent from "./pages/event/DeatailEvent";
-
+import ContactUs from "./screens/ContactUs";
+import ContentComponent from "./pages/content/partial/ContentComponent";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
           <Route path="/AllSpeakers" element={<AllSpeakers />} />
           <Route path="/detail" element={<DetailConetent />} />
           <Route path="/DeatailEvent" element={<DeatailEvent />} />
+          <Route path="/ContactUs" element={<ContactUs />} />
+          <Route path="/ContentComponent" element={<ContentComponent />} />
+
 
         </Routes>
         <Footer />

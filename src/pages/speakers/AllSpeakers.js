@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Header from "../../components/Header";
 
 export default function AllSpeakers() {
   const [SpeakersData, setSpeakersData] = useState([]);
@@ -31,28 +32,8 @@ export default function AllSpeakers() {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   return (
     <>
-      <section id="center" className="center_o pt-2 pb-2">
-        <div className="container-xl">
-          <div className="row center_o1">
-            <div className="col-md-5">
-              <div className="center_o1l">
-                <h2 className="mb-0">All Speakers</h2>
-              </div>
-            </div>
-            <div className="col-md-7">
-              <div className="center_o1r text-end">
-                <h6 className="mb-0 col_red">
-                  <Link to="/">Home</Link>
-                  <span className="me-2 ms-2 text-light">
-                    <i className="fa fa-caret-right align-middle" />
-                  </span>
-                  Speakers
-                </h6>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Header title={"Speakers"} />
+
       <section id="team" className="pt-4 pb-4 bg_grey">
         <div className="container-xl">
           <div className="team_1i row">
