@@ -6,7 +6,7 @@ import Content from "./screens/Content";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import AllSpeakers from "./pages/speakers/AllSpeakers";
-
+import DeatailEvent from "./pages/event/DeatailEvent";
 
 function App() {
   return (
@@ -17,8 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/content" element={<Content />} />
           <Route path="/AllSpeakers" element={<AllSpeakers />} />
-
-
+          <Route path="/DeatailEvent" element={<DeatailEvent />} />
         </Routes>
         <Footer />
       </div>

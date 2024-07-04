@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function Eventsection() {
   const [events, setEvents] = useState([]);
@@ -92,14 +93,14 @@ export default function Eventsection() {
                           <div className="trend_2im1 clearfix">
                             <div className="grid">
                               <figure className="effect-jazz mb-0">
-                                <a href="#">
+                                <Link href="#" to={`/DeatailEvent`} state={{ event }}>
                                   <img
                                     src={`https://ba.nahrawandacademy.com/storage/event/${event.image}`}
                                     className="w-100"
                                     alt={event.title}
                                     style={{ height: 180 }}
                                   />
-                                </a>
+                                </Link>
                               </figure>
                             </div>
                           </div>
