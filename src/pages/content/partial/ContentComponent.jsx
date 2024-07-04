@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function ContentComponent() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [currentPage, setCurrentPage] = useState(1); 
+  const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
 
   useEffect(() => {
@@ -73,7 +74,9 @@ export default function ContentComponent() {
                   <li>{item.contentType}</li>
                 </ul>
                 <h5 className="d-flex">
-                  <a href="#">{item.title}</a>
+                  <Link className="button" to="/detail" state={{ item }}>
+                    {item.title}
+                  </Link>
                 </h5>
               </div>
             </div>
