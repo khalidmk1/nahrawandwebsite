@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-export default function ContentComponent() {
+export default function ContentQuicklyComponent() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [currentPage, setCurrentPage] = useState(1); 
+  const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
 
   useEffect(() => {
@@ -24,8 +24,7 @@ export default function ContentComponent() {
     const response = await axios.get(
       `https://ba.nahrawandacademy.com/api/content?page=${page}`
     );
-    console.log(response.data);
-    return response.data.contents;
+    return response.data.contentQuicly;
   }
 
   const handlePageClick = (page) => {
@@ -52,31 +51,27 @@ export default function ContentComponent() {
     <div>
       <div className="row">
         {data.map((item, index) => (
-          <div className="col-lg-4 col-md-6 col-sm-6" key={index}>
-            <div className="product__item">
-              <div className="product__item__container">
-                <img
-                  className="product__item__pic set-bg w-100"
-                  src={`https://ba.nahrawandacademy.ma/storage/flex/${item.imageFlex}`}
-                  alt={`Product Image for ${item.name}`}
-                />
-                <div className="ep">18 / 18</div>
-                <div className="comment__content__card">
-                  <i className="fa fa-comments" /> 11
-                </div>
-                <div className="view__content__card">
-                  <i className="fa fa-eye" /> 9141
-                </div>
+          <div className="product__sidebar__comment">
+            <div className="product__sidebar__comment__item">
+              <div className="product__sidebar__comment__item__pic">
+                <img src={`https://ba.nahrawandacademy.ma/storage/flex/${item.imageFlex}`}
+                  alt={`Product Image for ${item.name}`} className="image__quickly" />
               </div>
-              <div className="product__item__text">
+              <div className="product__sidebar__comment__item__text">
                 <ul className="d-flex">
                   <li>{item.contentType}</li>
                 </ul>
-                <h5 className="d-flex">
+                <h5  className="d-flex">
                   <a href="#">{item.title}</a>
                 </h5>
+                <span>
+                  <i className="fa fa-eye" /> 19.141 Viewes
+                </span>
               </div>
             </div>
+           
+         
+            
           </div>
         ))}
       </div>
