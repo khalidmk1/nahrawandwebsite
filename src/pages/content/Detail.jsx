@@ -2,7 +2,6 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import ContentCommentComponent from "./partial/ContentCommentComponent";
 import ContentNewsComponent from "./partial/ContentNewsComponent";
-import Header from "../../components/Header";
 
 export default function Detail() {
   const location = useLocation();
