@@ -1,6 +1,6 @@
 import React from "react";
 import CardFormationComponent from "./partial/CardFormation";
-
+import { Link } from 'react-router-dom';
 
 export default function FormationSection() {
   return (
@@ -10,7 +10,7 @@ export default function FormationSection() {
           <div className="row trend_1">
             <div className="col-md-6 col-6">
               <div className="trend_1l">
-                <h4 className="mb-0" style={{textAlign:'justify'}}>
+                <h4 className="mb-0" style={{ textAlign: "justify" }}>
                   <i className="fa fa-youtube-play align-middle col_red me-1" />{" "}
                   Latest <span className="col_red">Formation</span>
                 </h4>
@@ -19,17 +19,15 @@ export default function FormationSection() {
             <div className="col-md-6 col-6">
               <div className="trend_1r text-end">
                 <h6 className="mb-0">
-                  <a className="button" href="#">
-                    {" "}
+                  <Link className="button" to="/content">
                     View All
-                  </a>
+                  </Link>
                 </h6>
               </div>
             </div>
           </div>
           <CardFormationComponent />
         </div>
-      
       </section>
     </>
   );
