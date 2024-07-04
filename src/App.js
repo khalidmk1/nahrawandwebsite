@@ -5,18 +5,22 @@ import Home from "./screens/Home";
 import Content from "./screens/Content";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import AllSpeakers from "./pages/speakers/AllSpeakers";
 
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar/>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/content" element={<Content />} />
+          <Route path="/AllSpeakers" element={<AllSpeakers />} />
+
+
         </Routes>
-        <Footer/>
+        <Footer />
       </div>
     </Router>
   );
