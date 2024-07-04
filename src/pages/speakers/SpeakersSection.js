@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function SpeakersSection() {
   const [speakersData, setSpeakersData] = useState([]);
@@ -19,7 +20,6 @@ export default function SpeakersSection() {
     fetchData();
   }, []);
 
-  // Function to group speakers into sets of four
   const chunkArray = (array, size) => {
     const chunkedArray = [];
     for (let i = 0; i < array.length; i += size) {
@@ -45,9 +45,9 @@ export default function SpeakersSection() {
           <div className="col-md-6 col-6">
             <div className="trend_1r text-end">
               <h6 className="mb-0">
-                <a className="button" href="#">
+                <Link className="button" to="/AllSpeakers">
                   View All
-                </a>
+                </Link>
               </h6>
             </div>
           </div>
@@ -67,7 +67,7 @@ export default function SpeakersSection() {
                   key={chunkIndex}
                 >
                   <div className="trend_2i row">
-                    {chunk.map((speaker , index) => (
+                    {chunk.map((speaker, index) => (
                       <div className="col-md-3" key={index}>
                         <div className="trend_2im clearfix position-relative">
                           <div className="trend_2im1 clearfix">

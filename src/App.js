@@ -4,6 +4,7 @@ import "./App.css";
 import Home from "./screens/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import AllSpeakers from "./pages/speakers/AllSpeakers";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/AllSpeakers" element={<AllSpeakers />} />
+
         </Routes>
         <Footer />
       </div>
