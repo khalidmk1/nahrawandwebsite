@@ -14,7 +14,7 @@ export default function Home() {
       <Eventsection />
       <ContentSection />
       <SpeakersSection />
-      <CultureSection />
+      {/* <CultureSection /> */}
     </div>
   );
 }

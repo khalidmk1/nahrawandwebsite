@@ -27,7 +27,7 @@ export default function ContactUs() {
                   <div className="contact_1ir">
                     <h5 className="col_red">Company Address</h5>
                     <p className="mb-0">
-                      5311 Ceaver Sidge Td. Pakland, DE 13507
+                      la villette, Cosmos 4 rue 1, Casablanca 20250
                     </p>
                   </div>
                 </div>
@@ -45,7 +45,7 @@ export default function ContactUs() {
                 <div className="col-md-10 col-10">
                   <div className="contact_1ir">
                     <h5 className="col_red">Office Hours</h5>
-                    <p className="mb-0">Monday To Saturday - 10.00 - 07.00</p>
+                    <p className="mb-0">Monday To Friday - 9am - 6pm</p>
                     <p className="mb-0">Sunday - Closed</p>
                   </div>
                 </div>
@@ -63,8 +63,7 @@ export default function ContactUs() {
                 <div className="col-md-10 col-10">
                   <div className="contact_1ir">
                     <h5 className="col_red">E-mail</h5>
-                    <p className="mb-0">info@gmail.com</p>
-                    <p className="mb-0">info@gmail.com</p>
+                    <p className="mb-0">nahrawandacademy@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -81,8 +80,7 @@ export default function ContactUs() {
                 <div className="col-md-10 col-10">
                   <div className="contact_1ir">
                     <h5 className="col_red">Phone Numbers</h5>
-                    <p className="mb-0">+123 123 456</p>
-                    <p className="mb-0">+123 123 456</p>
+                    <p className="mb-0">+212 522616800</p>
                   </div>
                 </div>
               </div>
@@ -91,31 +89,21 @@ export default function ContactUs() {
           <div className="row contact_2 mt-4">
             <div className="col-md-3">
               <div className="contact_2r">
-                <h5 className="mb-3">LONDON OFFICE</h5>
+                <h5 className="mb-3">CASABLANCA OFFICE</h5>
                 <p>
-                  <i className="fa fa-car col_red me-1" /> 111 Queen Sv, WIC 1,
-                  India
+                  <i className="fa fa-phone col_red me-1" /> +212 522616800
                 </p>
                 <p>
-                  <i className="fa fa-phone col_red me-1" /> +123 123 456
+                  <i className="fa fa-envelope col_red me-1" />
+                  <a href="#">nahrawandacademy@gmail.com</a>
                 </p>
                 <p>
-                  <i className="fa fa-globe col_red me-1" />{" "}
-                  <a href="#">info@gmail.com</a>
+                  Monday – Friday :
+                  <span className="fw-bold text-white">9am to 6pm</span>
                 </p>
                 <p>
-                  <i className="fa fa-envelope col_red me-1" />{" "}
-                  <a href="#">info@gmail.com</a>
-                </p>
-                <h5 className="mb-3 mt-4">BUSINESS HOURS</h5>
-                <p>Hotline is available for 24 hours a day!..</p>
-                <p>
-                  Monday – Friday :{" "}
-                  <span className="fw-bold text-white">9am to 7pm</span>
-                </p>
-                <p>
-                  Saturday :{" "}
-                  <span className="fw-bold text-white">11am to 3pm</span>
+                  Saturday :
+                  <span className="fw-bold text-white">9am to 1pm</span>
                 </p>
                 <p>
                   Sunday : <span className="fw-bold text-white">Closed</span>
@@ -178,7 +166,6 @@ export default function ContactUs() {
                     />
                     <h6 className="mt-3 mb-0">
                       <a className="button" href="#">
-                        {" "}
                         Submit
                       </a>
                     </h6>
