@@ -5,7 +5,13 @@ export default function ContactUs() {
   return (
     <>
       <Header title={"Contact"} />
-      <section id="contact" className="pt-4 pb-4 bg_grey">
+      <section
+        id="contact"
+        className="pt-4 pb-4 bg_grey"
+        style={{
+          textAlign: "left",
+        }}
+      >
         <div className="container-xl">
           <div className="row contact_1 bg_dark  pt-5 pb-5">
             <div className="col-md-3">
