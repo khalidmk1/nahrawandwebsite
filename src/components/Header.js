@@ -16,10 +16,10 @@ export default function Header({ title }) {
               <h6 className="mb-0 col_red">
                 <Link href="#" to={`/`}>
                   Home
-                </Link>{" "}
+                </Link>
                 <span className="me-2 ms-2 text-light">
                   <i className="fa fa-caret-right align-middle" />
-                </span>{" "}
+                </span>
                 Contact
               </h6>
             </div>
