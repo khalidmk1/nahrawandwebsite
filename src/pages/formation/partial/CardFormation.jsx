@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 async function fetchData() {
   const response = await axios.get(
     "https://ba.nahrawandacademy.com/api/content/formation"
   );
- 
+
   return response.data.slice(0, 12);
 }
 
@@ -78,29 +79,31 @@ export default function CardFormationComponent() {
                       <div className="trend_2im1 clearfix">
                         <div className="grid">
                           <figure className="effect-jazz mb-0">
-                            <a href="#">
-                              <img
-                                src={`https://ba.nahrawandacademy.ma/storage/content/${item.image}`}
-                                className="w-100"
-                                alt={item.title}
-                              />
-                            </a>
+                            <img
+                              src={`https://ba.nahrawandacademy.ma/storage/content/${item.image}`}
+                              className="w-100"
+                              alt={item.title}
+                            />
                           </figure>
                         </div>
                       </div>
-                      <div className="trend_2im2 clearfix text-center position-absolute w-100 top-0">
+                      {/*  <div className="trend_2im2 clearfix text-center position-absolute w-100 top-0">
                         <span className="fs-1">
                           <a className="col_red" href="#">
                             <i className="fa fa-youtube-play" />
                           </a>
                         </span>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="trend_2ilast bg_grey p-3 clearfix">
                       <h5>
-                        <a className="col_red" href="#">
+                        <Link
+                          className="button__content col_red"
+                          to="/detail"
+                          state={{ item }}
+                        >
                           ...{item.title.substring(0, 29)}
-                        </a>
+                        </Link>
                       </h5>
                       <p className="mb-2">
                         ...{item.smallDescription.substring(0, 30)}

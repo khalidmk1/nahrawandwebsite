@@ -141,12 +141,12 @@ export default function Navbar() {
                   Speakers
                 </NavLink>
               </li>
-              <li className="nav-item">
+             {/*  <li className="nav-item">
                 <a className="nav-link" href="about.html">
                   About Us
                 </a>
-              </li>
-              <li className="nav-item">
+              </li> */}
+              {/* <li className="nav-item">
                 <NavLink
                   to="/ContactUs"
                   className="nav-link"
@@ -154,7 +154,7 @@ export default function Navbar() {
                 >
                   Contact Us
                 </NavLink>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

@@ -11,9 +11,11 @@ import DeatailEvent from "./pages/event/DeatailEvent";
 import ContactUs from "./screens/ContactUs";
 import ContentComponent from "./pages/content/partial/ContentComponent";
 
+
 function App() {
   return (
     <Router>
+     
       <div className="App">
         <Navbar />
         <Routes>

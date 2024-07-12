@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 async function fetchData() {
   const response = await axios.get(
     "https://ba.nahrawandacademy.com/api/content/podcast"
   );
-
-  return response.data.slice(0, 6);
+  console.log(response.data);
+  return response.data.slice(0, 12);
 }
 
 export default function PodcastComponent() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -40,65 +41,111 @@ export default function PodcastComponent() {
     return <div>Error: {error.message}</div>;
   }
 
+  const groupedData = [];
+  for (let i = 0; i < data.length; i += 4) {
+    groupedData.push(data.slice(i, i + 4));
+  }
+
   return (
-    <div className="popular_2i row gapRow">
-      {data.map((item, index) => (
-        <div className="col-md-6" key={index}>
-          <div className="popular_2i1 row ">
-            <div className="col-md-4 col-4">
-              <div className="popular_2i1lm position-relative clearfix">
-                <div className="popular_2i1lm1 clearfix">
-                  <div className="grid">
-                    <figure className="effect-jazz mb-0">
-                      <a href="#">
-                        <img
-                          src={
-                            `https://ba.nahrawandacademy.ma/storage/flex/` +
-                            item.imageFlex
-                          }
-                          className="w-100"
-                          alt={item.title}
-                        />
-                      </a>
-                    </figure>
-                  </div>
-                </div>
-                <div className="popular_2i1lm2 position-absolute top-0 w-100 text-center clearfix">
-                  <ul>
-                    <li className="d-inline-block">
-                      <a href="#">
-                        <i className="fa fa-link col_red" />
-                      </a>
-                    </li>
-                    <li className="d-inline-block">
-                      <a href="#">
-                        <i className="fa fa-search col_red" />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-8 col-8">
-              <div className="popular_2i1r">
-                <h5>
-                  <a className="col_red" href="#">
-                    {item.title}
-                  </a>
-                </h5>
-                <h6>{item.genre}</h6>
-                <h6>Year: {new Date(item.created_at).getFullYear()}</h6>
-                <p>{item.smallDescription}</p>
-                <h6 className="mb-0">
-                  <a className="button" href="#">
-                    More Info - Trailer
-                  </a>
-                </h6>
-              </div>
-            </div>
-          </div>
+    <div className="row trend_2 mt-4">
+      <div
+        id="carouselPodcast1"
+        className="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div className="carousel-indicators" style={{ bottom: "-43px" }}>
+          {groupedData.map((_, index) => (
+            <button
+              key={index}
+              type="button"
+              data-bs-target="#carouselPodcast1"
+              data-bs-slide-to={index}
+              className={index === 0 ? "active" : ""}
+              aria-current={index === 0 ? "true" : ""}
+              aria-label={`Slide ${index + 1}`}
+            />
+          ))}
         </div>
-      ))}
+        <div className="carousel-inner">
+          {groupedData.map((group, groupIndex) => (
+            <div
+              key={groupIndex}
+              className={`carousel-item ${groupIndex === 0 ? "active" : ""}`}
+            >
+              <div className="trend_2i row">
+                {group.map((item, index) => (
+                  <div key={index} className="col-md-3 col-6">
+                    <div className="trend_2im clearfix position-relative">
+                      <div className="trend_2im1 clearfix">
+                        <div className="grid">
+                          <figure className="effect-jazz mb-0">
+                          <img
+                                src={`https://ba.nahrawandacademy.ma/storage/content/${item.image}`}
+                                className="w-100"
+                                alt={item.title}
+                              />
+                          </figure>
+                        </div>
+                      </div>
+                     {/*  <div className="trend_2im2 clearfix text-center position-absolute w-100 top-0">
+                        <span className="fs-1">
+                          <a className="col_red" href="#">
+                            <i className="fa fa-youtube-play" />
+                          </a>
+                        </span>
+                      </div> */}
+                    </div>
+                    <div className="trend_2ilast bg_grey p-3 clearfix">
+                      <h5>
+                      <Link
+                        className="button__content col_red"
+                        to="/detail"
+                        state={{ item }}
+                      >
+                        ...{item.title.substring(0, 29)}
+                      </Link>
+                      </h5>
+                     
+                      <span className="col_red">
+                        {[...Array(5)].map((_, starIndex) => (
+                          <i key={starIndex} className="fa fa-star" />
+                        ))}
+                      </span>
+                      <p className="mb-0">1 View</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+        <button
+          className="carousel-control-prev"
+          type="button"
+          style={{ visibility: "hidden" }}
+          data-bs-target="#carouselExampleIndicators1"
+          data-bs-slide="prev"
+        >
+          <span
+            className="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button
+          className="carousel-control-next"
+          type="button"
+          style={{ visibility: "hidden" }}
+          data-bs-target="#carouselExampleIndicators1"
+          data-bs-slide="next"
+        >
+          <span
+            className="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div>
     </div>
   );
 }

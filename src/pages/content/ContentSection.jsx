@@ -2,6 +2,7 @@ import React from "react";
 import FormationComponent from "./partial/FormationComponent";
 import PodcastComponent from "./partial/PodcastComponent";
 import QuicklyComponent from "./partial/QuicklyComponent";
+import { Link } from "react-router-dom";
 
 export default function ContentSection() {
   return (
@@ -9,12 +10,21 @@ export default function ContentSection() {
       <section id="popular" className="pt-4 pb-5 bg_grey">
         <div className="container">
           <div className="row trend_1">
-            <div className="col-md-12">
+            <div className="col-md-6 col-6">
               <div className="trend_1l">
                 <h4 className="mb-0" style={{ textAlign: "justify" }}>
                   <i className="fa fa-youtube-play align-middle col_red me-1" />{" "}
                   Trending <span className="col_red">Content</span>
                 </h4>
+              </div>
+            </div>
+            <div className="col-md-6 col-6">
+              <div className="trend_1r text-end">
+                <h6 className="mb-0">
+                  <Link className="button" to="/content">
+                    View All
+                  </Link>
+                </h6>
               </div>
             </div>
           </div>
