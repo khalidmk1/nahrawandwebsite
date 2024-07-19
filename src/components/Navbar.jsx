@@ -12,7 +12,7 @@ export default function Navbar() {
                 <h3 className="mb-0">
                   <a className="text-white" href="index.html">
                     <img
-                      src="./img/logo.png"
+                      src="img/logonahrawand.png"
                       alt="logo"
                       className="col_red me-1 logo_img"
                     />
