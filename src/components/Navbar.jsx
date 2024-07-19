@@ -12,7 +12,7 @@ export default function Navbar() {
                 <h3 className="mb-0">
                   <a className="text-white" href="index.html">
                     <img
-                      src="img/logonahrawand.png"
+                      src="./img/logo.png"
                       alt="logo"
                       className="col_red me-1 logo_img"
                     />
@@ -110,7 +110,7 @@ export default function Navbar() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul className="navbar-nav mb-0">
               <li className="nav-item">
                 <NavLink

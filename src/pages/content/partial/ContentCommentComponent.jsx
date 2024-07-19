@@ -6,7 +6,6 @@ async function fetchData(itemId) {
   const response = await axios.get(
     `https://ba.nahrawandacademy.com/api/content/all/comment/${itemId}`
   );
-  console.log(response.data);
   return response.data;
 }
 

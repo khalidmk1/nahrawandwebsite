@@ -6,7 +6,7 @@ async function fetchData() {
   const response = await axios.get(
     "https://ba.nahrawandacademy.com/api/content/formation"
   );
-  console.log(response.data);
+ 
   return response.data.slice(0, 12);
 }
 

@@ -25,7 +25,6 @@ export default function ContentComponent() {
     const response = await axios.get(
       `https://ba.nahrawandacademy.com/api/content?page=${page}`
     );
-    console.log(response.data);
     return response.data.contents;
   }
 

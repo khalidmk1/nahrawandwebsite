@@ -18,14 +18,14 @@ export default function Show() {
             <ContentComponent />
           </div>
           <div class="col-sm-3">
-          <div className="row titleContentStyle">
+            <div className="row titleContentStyle">
               <div className="col-lg-8 col-md-8 col-sm-6 ">
                 <div className="section-title position-relative">
                   <h4 className="content__title">Quickly</h4>
                 </div>
               </div>
             </div>
-            <ContentQuicklyComponent/>
+            <ContentQuicklyComponent />
           </div>
         </div>
       </div>

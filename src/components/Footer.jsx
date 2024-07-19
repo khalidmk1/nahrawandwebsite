@@ -53,9 +53,10 @@ export default function Footer() {
                     </a>
                   </h3>
                   <p className="mt-3">
-                    Lorem ipsum dolor sit amet consect etur adi pisicing elit
-                    sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet
-                    consect etur.
+                    Nahrawand Academy is the first human and personal
+                    development structure promoting Moroccan culture and
+                    identity with high level training and coaching programs
+                    adapted to the Moroccan conjuncture and needs.
                   </p>
                   <h6 className="fw-normal">
                     <i className="fa fa-map-marker fs-5 align-middle col_red me-1" />{" "}
@@ -63,7 +64,7 @@ export default function Footer() {
                   </h6>
                   <h6 className="fw-normal mt-3">
                     <i className="fa fa-envelope fs-5 align-middle col_red me-1" />{" "}
-                    mkadmikh12@gmail.com
+                    nahrawadn@gmail.com
                   </h6>
                   <h6 className="fw-normal mt-3 mb-0">
                     <i className="fa fa-phone fs-5 align-middle col_red me-1" />{" "}
@@ -75,7 +76,7 @@ export default function Footer() {
               <div className="col-md-4">
                 <div className="footer_1i">
                   <h4>
-                    Sign <span className="col_red">Nahrawand</span>
+                    News <span className="col_red">Nahrawand</span>
                   </h4>
                   <p className="mt-3">
                     Subscribe to our newsletter list to get latest news and
@@ -154,35 +155,8 @@ export default function Footer() {
               <div className="footer_1l">
                 <p className="mb-0">
                   © {new Date().getFullYear()} Your Website Name. All Rights
-                  Reserved | Design by{" "}
-                  <a className="col_red" href="http://www.templateonweb.com">
-                    Khalid MAKDMI / Hassan ELAASEMY
-                  </a>
+                  Reserved
                 </p>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="footer_1r">
-                <ul className="mb-0">
-                  <li className="d-inline-block me-2">
-                    <a href="#">Home</a>
-                  </li>
-                  <li className="d-inline-block me-2">
-                    <a href="#">Features</a>
-                  </li>
-                  <li className="d-inline-block me-2">
-                    <a href="#">Pages</a>
-                  </li>
-                  <li className="d-inline-block me-2">
-                    <a href="#">Portfolio</a>
-                  </li>
-                  <li className="d-inline-block me-2">
-                    <a href="#">Blog</a>
-                  </li>
-                  <li className="d-inline-block">
-                    <a href="#">Contact</a>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>

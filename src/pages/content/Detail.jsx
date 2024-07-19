@@ -44,35 +44,37 @@ export default function Detail() {
                           <span>Type:</span> {item.contentType}
                         </li>
                         <li>
-                          <span>Host:</span> Lerche
+                          <span>Host:</span>{" "}
+                          {item.user.firstName + " " + item.user.lastName}
                         </li>
                         <li>
-                          <span>Date aired:</span> Oct 02, 2019 to ?
+                          <span>Date Created:</span> {item.created_at}
                         </li>
                         <li>
-                          <span>Status:</span> Airing
+                          <span>Status:</span>{" "}
+                          {item.isActive == 1 ? "Active" : ""}
                         </li>
                         <li>
-                          <span>Genre:</span> Action, Adventure, Fantasy, Magic
+                          <span>Genre:</span>{" "}
+                          {item.tags.map((tag, index) => (
+                            <React.Fragment key={tag.id}>
+                              {tag.name.en}
+                              {index !== item.tags.length - 1 && ", "}
+                            </React.Fragment>
+                          ))}
                         </li>
                       </ul>
                     </div>
                     <div className="col-lg-6 col-md-6">
                       <ul>
                         <li>
-                          <span>Scores:</span> 7.31 / 1,515
-                        </li>
-                        <li>
-                          <span>Rating:</span> 8.5 / 161 times
-                        </li>
-                        <li>
-                          <span>Duration:</span> 24 min/ep
+                          <span>Duration:</span> {item.duration}
                         </li>
                         <li>
                           <span>Quality:</span> HD
                         </li>
                         <li>
-                          <span>Views:</span> 131,541
+                          <span>Views:</span> 1
                         </li>
                       </ul>
                     </div>
