@@ -73,7 +73,7 @@ export default function AllSpeakers() {
                       </figure>
                     </div>
                   </div>
-                  <div className="team_1i1i1 clearfix position-absolute w-100 bottom-0">
+                  <div className="team_1i1i1 clearfix position-absolute w-100 bottom-0" >
                     <h4 className="col_red">{speaker.fullName} </h4>
                     <h6>{speaker.roles.join(", ")}</h6>
                     <p

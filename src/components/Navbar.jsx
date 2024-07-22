@@ -10,18 +10,18 @@ export default function Navbar() {
             <div className="col-md-3">
               <div className="top_1l pt-1">
                 <h3 className="mb-0">
-                  <a className="text-white" href="index.html">
+                  <Link className="text-white" to={"./"}>
                     <img
                       src="img/logonahrawand.png"
                       alt="logo"
                       className="col_red me-1 logo_img"
                     />
-                  </a>
+                  </Link>
                 </h3>
               </div>
             </div>
-            <div className="col-md-5">
-              {/*   <div className="top_1m">
+            {/* <div className="col-md-5">
+                <div className="top_1m">
                 <div className="input-group">
                   <input
                     type="text"
@@ -37,9 +37,8 @@ export default function Navbar() {
                     </button>
                   </span>
                 </div>
-              </div> */}
-            </div>
-
+              </div>
+            </div> */}
             <div className="col-md-4">
               <div className="top_1r text-end">
                 <ul
@@ -92,74 +91,79 @@ export default function Navbar() {
           </div>
         </div>
       </section>
-
       <section id="header">
-      <nav className="navbar navbar-expand-md navbar-light" id="navbar_sticky">
-        <div className="container">
-          <a className="navbar-brand text-white fw-bold" href="index.html">
-            <i className="fa fa-video-camera col_red me-1"></i> Planet
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mb-0">
-              <li className="nav-item">
-                <NavLink
-                  exact
-                  to="/"
-                  className="nav-link"
-                  activeClassName="active"
-                  aria-current="page"
-                >
-                  Home
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  to="/content"
-                  className="nav-link"
-                  activeClassName="active"
-                >
-                 Content
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  to="/AllSpeakers"
-                  className="nav-link"
-                  activeClassName="active"
-                >
-                  Speakers
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="about.html">
-                  About Us
-                </a>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  to="/ContactUs"
-                  className="nav-link"
-                  activeClassName="active"
-                >
-                  Contact Us
-                </NavLink>
-              </li>
-            </ul>
+        <nav
+          className="navbar navbar-expand-md navbar-light"
+          id="navbar_sticky"
+        >
+          <div className="container">
+            <a className="navbar-brand text-white fw-bold" href="index.html">
+              <i className="fa fa-video-camera col_red me-1"></i> Planet
+            </a>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              <ul className="navbar-nav mb-0">
+                <li className="nav-item">
+                  <NavLink
+                    exact
+                    to="/"
+                    className="nav-link"
+                    activeClassName="active"
+                    aria-current="page"
+                  >
+                    Home
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink
+                    to="/content"
+                    className="nav-link"
+                    activeClassName="active"
+                  >
+                    Content
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink
+                    to="/AllSpeakers"
+                    className="nav-link"
+                    activeClassName="active"
+                  >
+                    Speakers
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="about.html">
+                    About Us
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <NavLink
+                    to="/ContactUs"
+                    className="nav-link"
+                    activeClassName="active"
+                  >
+                    Contact Us
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </nav>
-    </section>
+        </nav>
+      </section>
     </>
   );
 }
