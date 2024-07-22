@@ -37,28 +37,25 @@ export default function Eventsection() {
     }
     return chunks;
   };
-
   const eventChunks = chunkArray(events, 3);
-
   return (
     <section id="upcome" className="pt-4 pb-5">
       <div className="container">
-        <div className="row trend_1">
-          <div className="col-md-6 col-6">
-            <div className="trend_1l ">
-              <div className="row trend_1">
-                <div className="col-md-12">
-                  <div className="trend_1l text-start">
-                    <h4 className="mb-0">
-                      <i className="fa fa-calendar align-middle col_red me-1"></i>
-                      Upcoming <span className="col_red">Events</span>
-                    </h4>
-                  </div>
-                </div>
-              </div>
+        
+            <div class="row trend_1">
+          <div class="col-md-6 col-6">
+            <div class="trend_1l text-start">
+              <h4 class="mb-0">
+                <i class="fa fa-youtube-play align-middle col_red me-1"></i>
+                Upcoming <span class="col_red ">Events</span>
+              </h4>
             </div>
           </div>
-          <div className="col-md-6 col-6"></div>
+          <div class="col-md-6 col-6">
+            <div class="trend_1r text-end">
+              <h6 class="mb-0"><Link class="button" to={`/AllEvents`}> View All</Link></h6>
+            </div>
+          </div>
         </div>
         <div className="row trend_2 mt-4">
           <div

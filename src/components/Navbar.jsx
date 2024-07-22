@@ -10,18 +10,18 @@ export default function Navbar() {
             <div className="col-md-3">
               <div className="top_1l pt-1">
                 <h3 className="mb-0">
-                  <a className="text-white" href="index.html">
+                  <Link className="text-white" to={"./"}>
                     <img
                       src="img/logonahrawand.png"
                       alt="logo"
                       className="col_red me-1 logo_img"
                     />
-                  </a>
+                  </Link>
                 </h3>
               </div>
             </div>
-            <div className="col-md-5">
-              {/*   <div className="top_1m">
+            {/* <div className="col-md-5">
+                <div className="top_1m">
                 <div className="input-group">
                   <input
                     type="text"
@@ -37,9 +37,8 @@ export default function Navbar() {
                     </button>
                   </span>
                 </div>
-              </div> */}
-            </div>
-
+              </div>
+            </div> */}
             <div className="col-md-4">
               <div className="top_1r text-end">
                 <ul
@@ -92,7 +91,6 @@ export default function Navbar() {
           </div>
         </div>
       </section>
-
       <section id="header">
       <nav className="navbar navbar-expand-md navbar-light" id="navbar_sticky">
         <div className="container">
@@ -110,7 +108,7 @@ export default function Navbar() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mb-0">
               <li className="nav-item">
                 <NavLink
@@ -141,12 +139,12 @@ export default function Navbar() {
                   Speakers
                 </NavLink>
               </li>
-             {/*  <li className="nav-item">
+              <li className="nav-item">
                 <a className="nav-link" href="about.html">
                   About Us
                 </a>
-              </li> */}
-              {/* <li className="nav-item">
+              </li>
+              <li className="nav-item">
                 <NavLink
                   to="/ContactUs"
                   className="nav-link"
@@ -154,7 +152,7 @@ export default function Navbar() {
                 >
                   Contact Us
                 </NavLink>
-              </li> */}
+              </li>
             </ul>
           </div>
         </div>
