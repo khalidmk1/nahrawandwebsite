@@ -14,34 +14,34 @@ import AllEvents from "./pages/event/AllEvents";
 
 
 function App() {
-  var endDate = new Date().getTime() + 1000800000;
+  /* var endDate = new Date().getTime() + 1000800000;
 
-var x = setInterval(function() {
+  var x = setInterval(function () {
 
-    var now =  new Date().getTime();
+    var now = new Date().getTime();
 
     var timeRemaining = endDate - now;
 
     var daysRemaining = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-    var hoursRemaining = Math.floor((timeRemaining % (1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+    var hoursRemaining = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutesRemaining = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
     var secondsRemaining = Math.floor((timeRemaining % (1000 * 60)) / (1000));
 
     document.getElementById("days").innerHTML = daysRemaining;
     document.getElementById("hours").innerHTML = hoursRemaining;
     document.getElementById("minutes").innerHTML = minutesRemaining;
-    document.getElementById("seconds").innerHTML = secondsRemaining; 
+    document.getElementById("seconds").innerHTML = secondsRemaining;
 
-    if (timeRemaining < 0) { 
-        clearInterval(x);
-		document.getElementById("days").innerHTML ='0'; 
-		document.getElementById("hours").innerHTML ='0'; 
-		document.getElementById("minutes").innerHTML ='0' ; 
-        document.getElementById("seconds").innerHTML = '0';
-        alert("Thank you for your patience");
+    if (timeRemaining < 0) {
+      clearInterval(x);
+      document.getElementById("days").innerHTML = '0';
+      document.getElementById("hours").innerHTML = '0';
+      document.getElementById("minutes").innerHTML = '0';
+      document.getElementById("seconds").innerHTML = '0';
+      alert("Thank you for your patience");
     }
 
-},1000);
+  }, 1000); */
   return (
 
     // <Router>
@@ -68,7 +68,7 @@ var x = setInterval(function() {
           <div className="row">
             <div className="col-md-6 section-left">
               <h1 className="page-title">We are launching soon</h1>
-              <div id="timer" className="bd-cd-timer">
+             {/*  <div id="timer" className="bd-cd-timer">
                 <div className="time-card">
                   <span className="time-count" id="days" />
                   <span className="time-label">DAYS</span>
@@ -85,8 +85,8 @@ var x = setInterval(function() {
                   <span className="time-count" id="seconds" />
                   <span className="time-label">SECONDS</span>
                 </div>
-              </div>
-       
+              </div> */}
+
             </div>
             <div className="col-md-6 d-none d-md-flex align-items-center jutify-content-center">
               <img
@@ -100,17 +100,19 @@ var x = setInterval(function() {
       </main>
       <footer className="text-center">
         <nav className="footer-social-links">
-          <a href="#!" className="social-link">
+          <a href="https://www.facebook.com/nahrawandacademyofficial/" className="social-link">
             <i className="mdi mdi-facebook-box" />
           </a>
-          <a href="#!" className="social-link">
-            <i className="mdi mdi-twitter" />
+          <a href="https://www.instagram.com/mynahrawandacademy/" className="social-link">
+            <i className="mdi mdi-instagram" />
           </a>
-          <a href="#!" className="social-link">
+          <a href="https://www.youtube.com/@nahrawandacademy/featured" className="social-link">
             <i className="mdi mdi-google" />
           </a>
+          <a href="https://www.linkedin.com/company/nahrawandacedemy/?originalSubdomain=ma" className="social-link">
+            <i className="mdi mdi-linkedin" />
+          </a>
         </nav>
-        <p className="footer-text mb-0">Copyright 2020 bootstrapdash</p>
       </footer>
     </section>
   );
